@@ -1,0 +1,22 @@
+<!-- notifications.component.html -->
+
+<div class="transaction-notifications">
+  <h2>Transaction Notifications</h2>
+
+  <div *ngIf="transactions.length > 0; else noTransactions">
+    <!-- Display each transaction -->
+    <div class="transaction-item" *ngFor="let transaction of transactions">
+      <div class="notification-card">
+        <p class="notification-message">{{ transaction }}</p>
+        <hr />
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noTransactions>
+    <p>No transactions available.</p>
+  </ng-template>
+</div>
+<footer>
+  &copy; 2024 Designed and Developed by Vishal Shinde
+</footer>
